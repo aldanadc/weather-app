@@ -31,7 +31,7 @@ app.include_router(controller)
 @app.get("/")
 def home_route():
     user = os.getenv("USER_NAME", "guest user")
-    return {"message": f"Welcome to this API's home page, {user}."}
+    return {"message": f"Welcome to this API's home page, {user}. Visit the docs here: http:/localhost:8080/weather-api-service/docs"}
 
 
 @app.exception_handler(Exception)
