@@ -68,7 +68,8 @@ class WeatherService():
     Raises:
         HTTPException: if no city is found with the provided parameters
 
-    Returns: dict with the format of the class WeatherResponse
+    Returns:
+        dict: data with the format of the class WeatherResponse
     """
 
     @staticmethod

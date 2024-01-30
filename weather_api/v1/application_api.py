@@ -12,6 +12,20 @@ weather_cache = TTLCache(maxsize=100, ttl=180)
 
 @controller.get("/weather", response_model=WeatherResponse)
 def get_weather_by_city(city: str, country_code: str):
+    """Receive city and country and return the weather and forecast for the location.
+
+    Args:
+        city (str): name of the city
+        country_code (str): country_code as per ISO 3166
+ 
+    Returns:
+        dict: formatted current weather and forecast data. If information for that city and country exist in the cache, return that.
+        Otherwise, fetch new data, format and return it.
+    
+    Raises:
+        HTTPException: if wrong or no parameters are received
+    """
+
     if not city or not country_code:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,
                             detail={"status": status.HTTP_400_BAD_REQUEST, "message": "Please provide data for city and country."})
@@ -35,6 +49,7 @@ def get_weather_by_city(city: str, country_code: str):
 
 
 def get_data_from_cache(city: str):
+    """Check cache and return data if it exists. Otherwise return None"""
     cached_data = weather_cache.get(city)
     if cached_data:
         return cached_data
