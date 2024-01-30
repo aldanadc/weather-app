@@ -11,9 +11,9 @@ Author: Aldana D. Casal
 import os
 import uvicorn
 from fastapi import FastAPI, Request
+from fastapi.responses import JSONResponse
 from dotenv import load_dotenv
 from weather_api.v1.application_api import controller
-from fastapi.responses import JSONResponse
 
 
 app = FastAPI(

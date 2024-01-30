@@ -1,7 +1,7 @@
 import os
 import requests
-from dotenv import load_dotenv
 import xmltodict
+from dotenv import load_dotenv
 from fastapi import HTTPException
 from weather_api.weather_service.formatter import OpenWeatherFormatter
 
