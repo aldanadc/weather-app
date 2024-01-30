@@ -14,7 +14,6 @@ requests = "^2.31.0"
 xmltodict = "^0.13.0"
 pytz = "^2023.3.post1"
 cachetools = "^5.3.2"
-httpx = "^0.26.0"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -22,6 +21,7 @@ flake8 = "^7.0.0"
 httpretty = "^1.1.4"
 freezegun = "^1.4.0"
 pytest = "^8.0.0"
+httpx = "^0.26.0"
 
 [build-system]
 requires = ["poetry-core"]
