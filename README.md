@@ -1,5 +1,5 @@
 # weather-app
-A simple weather API aplication to check the current weather and forecast across the globe. Made with ❤️ in Python with FastAPI, using [OpenWeather](https://openweathermap.org/api)'s API.
+A simple weather API application to check the current weather and forecast across the globe. Made with ❤️ in Python with FastAPI, using [OpenWeather](https://openweathermap.org/api)'s API.
 
 
 ![image](https://user-images.githubusercontent.com/75340355/120859230-4c22a700-c55a-11eb-81c8-57ef271ae508.png)
